@@ -1,5 +1,5 @@
 {
-    "name": "ez/flash-messages",
+    "name": "ez-laravel/flash-messages",
     "description": "Easy flash messages for your Laravel application.",
     "authors": [
         {
