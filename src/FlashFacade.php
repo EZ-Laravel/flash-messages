@@ -8,6 +8,6 @@ class FlashFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return "flash";
+        return 'flash';
     }
 }

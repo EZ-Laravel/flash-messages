@@ -5,8 +5,8 @@ namespace EZ\FlashMessages;
 interface SessionStore
 {
     /**
-     * Flash a message to the session
-     * 
+     * Flash a message to the session.
+     *
      * @param string $name
      * @param array $data
      * @return void

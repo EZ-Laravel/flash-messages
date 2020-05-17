@@ -2,9 +2,9 @@
 
 namespace EZ\LaravelMessages\Tests;
 
+use EZ\FlashMessages\FlashService;
 use Mockery;
 use PHPUnit\Framework\TestCase;
-use EZ\FlashMessages\FlashService;
 
 class FlashMessageTest extends TestCase
 {
@@ -12,7 +12,7 @@ class FlashMessageTest extends TestCase
 
     protected $flash;
 
-    public function setUp() : void
+    public function setUp(): void
     {
         $this->session = Mockery::spy('EZ\FlashMessages\SessionStore');
 
@@ -23,7 +23,7 @@ class FlashMessageTest extends TestCase
     public function it_can_interact_with_a_message_as_an_array()
     {
         $this->flash->message('Test', 'one', 'two');
-        
+
         $this->assertEquals('Test', $this->flash->messages[0]['message']);
     }
 
@@ -121,7 +121,7 @@ class FlashMessageTest extends TestCase
     }
 
     /** @test */
-    function it_builds_an_overlay_flash_notification()
+    public function it_builds_an_overlay_flash_notification()
     {
         $this->flash->message('Thank You')->overlay();
 

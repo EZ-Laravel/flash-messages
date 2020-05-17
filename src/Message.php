@@ -6,42 +6,42 @@ class Message implements \ArrayAccess
 {
     /**
      * The title of the message.
-     * 
+     *
      * @var string
      */
     public $title;
 
     /**
      * The body of the message.
-     * 
+     *
      * @var string;
      */
     public $message;
 
     /**
      * The level of the message.
-     * 
+     *
      * @var string
      */
-    public $level = "info";
+    public $level = 'info';
 
     /**
-     * Whether the message should auto-hide
-     * 
+     * Whether the message should auto-hide.
+     *
      * @var bool
      */
     public $important = false;
 
     /**
-     * Whether the message is an overlay
-     * 
+     * Whether the message is an overlay.
+     *
      * @var bool
      */
     public $overlay = false;
 
     /**
-     * Create a new Message instance
-     * 
+     * Create a new Message instance.
+     *
      * @param array $attributes
      */
     public function __construct($attributes = [])
@@ -51,7 +51,7 @@ class Message implements \ArrayAccess
 
     /**
      * Update the attributes.
-     * 
+     *
      * @param array $attributes
      * @return $this
      */
@@ -68,7 +68,7 @@ class Message implements \ArrayAccess
 
     /**
      * Whether the given offset exists.
-     * 
+     *
      * @param mixed $offset
      * @return bool
      */
@@ -79,7 +79,7 @@ class Message implements \ArrayAccess
 
     /**
      * Fetch the offset.
-     * 
+     *
      * @param mixed $offset
      * @return mixed
      */
@@ -90,7 +90,7 @@ class Message implements \ArrayAccess
 
     /**
      * Assign the offset.
-     * 
+     *
      * @param mixed $offset
      * @return void
      */
@@ -101,7 +101,7 @@ class Message implements \ArrayAccess
 
     /**
      * Unset the offset.
-     * 
+     *
      * @param mixed $offset
      * @return void
      */

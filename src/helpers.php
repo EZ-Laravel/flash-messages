@@ -1,10 +1,9 @@
 <?php
 
-if (!function_exists('flash'))
-{
+if (! function_exists('flash')) {
     /**
      * Helper method for flashing messages.
-     * 
+     *
      * @param string|null $message
      * @param string $level
      * @return \EZ\FlashMessages\FlashService
@@ -13,7 +12,7 @@ if (!function_exists('flash'))
     {
         $service = app('flash');
 
-        if (!is_null($service)) {
+        if (! is_null($service)) {
             return $service->message($message, $level);
         }
 
