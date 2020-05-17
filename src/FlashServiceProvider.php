@@ -13,8 +13,8 @@ class FlashServiceProvider extends ServiceProvider
         // $this->publishes([__DIR__."/../../config/config.php" => config_path("tessify-core.php")], "config");
 
         // Setup view loading & publishing
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'flash');
-        $this->publishes([__DIR__.'/../../resources/views' => base_path('resources/views/vendor/flash')]);
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'flash');
+        $this->publishes([__DIR__.'/../resources/views' => base_path('resources/views/vendor/flash')]);
     }
 
     public function register()
