@@ -12,7 +12,7 @@ class FlashService
 
     public $messages;
 
-    function __construct(SessionStore $session)
+    public function __construct(SessionStore $session)
     {
         $this->session = $session;
         $this->messages = collect();
@@ -38,10 +38,9 @@ class FlashService
         return $this->message($message, 'danger');
     }
 
-    public function overlay($message = null, $title = "Notice")
+    public function overlay($message = null, $title = 'Notice')
     {
-        if (!$message)
-        {
+        if (! $message) {
             return $this->updateLastMessage(['title' => $title, 'overlay' => true]);
         }
 
@@ -52,19 +51,17 @@ class FlashService
 
     public function important()
     {
-        return $this->updateLastMessage(['important' => true]);        
+        return $this->updateLastMessage(['important' => true]);
     }
 
     public function message($message = null, $level = null)
     {
         // If no message was provided; we should update the most recently added message
-        if (!$message)
-        {
+        if (! $message) {
             return $this->updateLastMessage(compact('level'));
         }
 
-        if (!$message instanceof Message)
-        {
+        if (! $message instanceof Message) {
             $message = new Message(compact('message', 'level'));
         }
 

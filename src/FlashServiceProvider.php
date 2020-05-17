@@ -23,7 +23,7 @@ class FlashServiceProvider extends ServiceProvider
         $this->app->bind('EZ\FlashMessages\SessionStore', 'EZ\FlashMessages\LaravelSessionStore');
 
         // Register the flash service as a singleton on the IoC container
-        $this->app->singleton("flash", function($app) {
+        $this->app->singleton('flash', function ($app) {
             return $this->app->make('EZ\FlashMessages\FlashService');
         });
     }

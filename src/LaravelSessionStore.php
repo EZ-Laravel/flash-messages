@@ -12,8 +12,8 @@ class LaravelSessionStore implements SessionStore
     private $session;
 
     /**
-     * Create a new session store instance
-     * 
+     * Create a new session store instance.
+     *
      * @param Store $session
      */
     public function __construct(Store $session)
@@ -22,8 +22,8 @@ class LaravelSessionStore implements SessionStore
     }
 
     /**
-     * Flash a message to the session
-     * 
+     * Flash a message to the session.
+     *
      * @param string $name
      * @param array $data
      * @return void
@@ -31,5 +31,5 @@ class LaravelSessionStore implements SessionStore
     public function flash($name, $data)
     {
         $this->session->flash($name, $data);
-    } 
+    }
 }
