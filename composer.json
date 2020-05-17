@@ -1,0 +1,40 @@
+{
+    "name": "ez/flash-messages",
+    "description": "Easy flash messages for your Laravel application.",
+    "authors": [
+        {
+            "name": "Nick Verheijen",
+            "email": "verheijen.webdevelopment@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "EZ\\FlashMessages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EZ\\FlashMessages\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3",
+        "phpunit/phpunit": "^9.1",
+        "phpunit/php-code-coverage": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EZ\\FlashMessages\\FlashServiceProvider"
+            ],
+            "aliases": {
+                "Flash": "EZ\\FlashMessages\\FlashFacade"
+            }
+        }
+    }
+}
