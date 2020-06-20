@@ -6,6 +6,7 @@
                 message="{{ $message['message'] }}">
             </flash-modal>
         @else
+
             @if ($message["important"])
                 <flash-message
                     icon="<i class='fas fa-exclamation-triangle'></i>"
