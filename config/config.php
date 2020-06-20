@@ -11,6 +11,6 @@
 return [
 
     // Should the flash messages have a shadow?
-    "elevated" => true,
+    'elevated' => true,
 
 ];
