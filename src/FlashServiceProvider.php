@@ -12,18 +12,18 @@ class FlashServiceProvider extends ServiceProvider
         // Setup integration & publishing of the config file
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'flash');
         $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('flash.php')
+            __DIR__.'/../config/config.php' => config_path('flash.php'),
         ], 'config');
 
         // Setup view loading & publishing
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'flash');
         $this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/flash')
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/flash'),
         ], 'views');
 
         // Setup component publishing
         $this->publishes([
-            __DIR__.'/../resources/js/components' => base_path('resources/js/components')
+            __DIR__.'/../resources/js/components' => base_path('resources/js/components'),
         ], 'vue');
 
         // Compose views
