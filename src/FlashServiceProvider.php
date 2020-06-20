@@ -10,16 +10,16 @@ class FlashServiceProvider extends ServiceProvider
     public function boot()
     {
         // Setup integration & publishing of the config file
-        $this->mergeConfigFrom(__DIR__."/../config/config.php", "flash");
-        $this->publishes([__DIR__."/../config/config.php" => config_path("flash.php")], "config");
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'flash');
+        $this->publishes([__DIR__.'/../config/config.php' => config_path('flash.php')], 'config');
 
         // Setup view loading & publishing
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'flash');
-        $this->publishes([__DIR__.'/../resources/views' => base_path('resources/views/vendor/flash')], "views");
+        $this->publishes([__DIR__.'/../resources/views' => base_path('resources/views/vendor/flash')], 'views');
 
         // Setup component publishing
-        $this->publishes([__DIR__.'../resources/js/components' => base_path('resources/js/components')], "vue");
-        
+        $this->publishes([__DIR__.'../resources/js/components' => base_path('resources/js/components')], 'vue');
+
         // Compose views
         $this->composeViews();
     }
@@ -34,12 +34,12 @@ class FlashServiceProvider extends ServiceProvider
             return $this->app->make('EZ\FlashMessages\FlashService');
         });
     }
-    
+
     private function composeViews()
     {
         // Pass the config properties to the messages partial
-        View::composer("flash::messages", function($view) {
-            $view->with("elevated", config("flash.elevated"));
+        View::composer('flash::messages', function ($view) {
+            $view->with('elevated', config('flash.elevated'));
         });
     }
 }
