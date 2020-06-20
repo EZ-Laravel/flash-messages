@@ -7,10 +7,14 @@ Package to provide you with an easy way to implement flash messages in your Lara
 ## Installation
 
 Run the following command in your project directory to install the package:
-```composer require ez-laravel/flash-messages```
+```
+composer require ez-laravel/flash-messages
+```
 
-Next publish the package's assets with the following command:
-```php artisan vendor:publish --provider="EZ\FlashMessages\FlashServiceProvider"```
+Publish the vue components 
+```
+php artisan vendor:publish --provider="EZ\FlashMessages\FlashServiceProvider" --tag=vue
+```
 
 ### Views
 
