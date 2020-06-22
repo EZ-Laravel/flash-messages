@@ -19,7 +19,7 @@ php artisan vendor:publish --provider=EZ\FlashMessages\FlashServiceProvider --ta
 This will publish a `flash-messages` directory in your `resources/js/components` directory. 
 
 Make sure these components are (auto) loaded in. I usually make this happen using:
-```
+```js
 // app.js
 
 // Automatically load all vue components
@@ -38,7 +38,7 @@ Use the following blade directive to include the flash messages partial in any v
 
 Afterwards you can call the following methods from your controller to flash messages to the session which will be displayed on the next page load.
 
-```
+```php
 // Message with level 'info'
 flash('Your message');
 
